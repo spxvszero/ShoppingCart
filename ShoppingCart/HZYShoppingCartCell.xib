@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HZYShoppingCartViewController"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cartCell" id="F2c-rd-xEp" customClass="HZYShoppingCartCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="F2c-rd-xEp" id="g3z-tA-zzu">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1M-X5-Yxe" userLabel="itemSelected">
+                        <rect key="frame" x="-40" y="2" width="40" height="40"/>
+                        <animations/>
+                        <state key="normal" backgroundImage="itemBtn"/>
+                        <state key="selected" backgroundImage="itemBtn_selected"/>
+                        <connections>
+                            <action selector="selectBtnClick:" destination="F2c-rd-xEp" eventType="touchUpInside" id="mK0-ng-NhT"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O6S-N2-NeM" userLabel="title">
+                        <rect key="frame" x="18" y="11" width="42" height="20.5"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stP-kc-sR3" userLabel="number">
+                        <rect key="frame" x="270" y="11" width="42" height="20.5"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xnw-b8-lGv" userLabel="text">
+                        <rect key="frame" x="215" y="7" width="40" height="30"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="OOb-rI-V22"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                    </textField>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XTf-SF-Q2e" userLabel="p">
+                        <rect key="frame" x="180" y="11" width="22" height="22"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="QMv-Ko-vXb"/>
+                            <constraint firstAttribute="width" constant="22" id="oOY-aV-ll0"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="plus"/>
+                        <connections>
+                            <action selector="addItem:" destination="F2c-rd-xEp" eventType="touchUpInside" id="PvJ-Ts-8ag"/>
+                        </connections>
+                    </button>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5KI-fb-jkb" userLabel="m">
+                        <rect key="frame" x="268" y="11" width="22" height="22"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="22" id="NdR-FU-OEC"/>
+                            <constraint firstAttribute="height" constant="22" id="Tcc-eM-uyk"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="minus"/>
+                        <connections>
+                            <action selector="removeItem:" destination="F2c-rd-xEp" eventType="touchUpInside" id="PCU-Gw-Eg9"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="O6S-N2-NeM" firstAttribute="centerY" secondItem="h1M-X5-Yxe" secondAttribute="centerY" id="0qs-1U-KC7"/>
+                    <constraint firstItem="O6S-N2-NeM" firstAttribute="leading" secondItem="h1M-X5-Yxe" secondAttribute="trailing" constant="18" id="4KK-GM-BPM"/>
+                    <constraint firstItem="h1M-X5-Yxe" firstAttribute="centerY" secondItem="g3z-tA-zzu" secondAttribute="centerY" id="CuU-yW-8ae"/>
+                    <constraint firstItem="stP-kc-sR3" firstAttribute="centerY" secondItem="O6S-N2-NeM" secondAttribute="centerY" id="E0X-GK-noF"/>
+                    <constraint firstItem="5KI-fb-jkb" firstAttribute="leading" secondItem="xnw-b8-lGv" secondAttribute="trailing" constant="13" id="Es4-xN-Vw8"/>
+                    <constraint firstItem="h1M-X5-Yxe" firstAttribute="leading" secondItem="g3z-tA-zzu" secondAttribute="leading" constant="-40" id="Hhc-pt-BnV"/>
+                    <constraint firstItem="xnw-b8-lGv" firstAttribute="centerY" secondItem="g3z-tA-zzu" secondAttribute="centerY" id="Plh-0n-BGo"/>
+                    <constraint firstAttribute="trailing" secondItem="stP-kc-sR3" secondAttribute="trailing" constant="8" id="VIH-Td-ERU"/>
+                    <constraint firstItem="XTf-SF-Q2e" firstAttribute="centerY" secondItem="xnw-b8-lGv" secondAttribute="centerY" id="hO8-HT-6Ed"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="xnw-b8-lGv" secondAttribute="trailing" constant="57" id="jvY-Tt-9lB"/>
+                    <constraint firstItem="xnw-b8-lGv" firstAttribute="leading" secondItem="XTf-SF-Q2e" secondAttribute="trailing" constant="13" id="mjA-Tq-nuw"/>
+                    <constraint firstItem="5KI-fb-jkb" firstAttribute="centerY" secondItem="xnw-b8-lGv" secondAttribute="centerY" id="nbm-sp-6wh"/>
+                    <constraint firstItem="stP-kc-sR3" firstAttribute="leading" secondItem="xnw-b8-lGv" secondAttribute="trailing" constant="15" id="zKo-hV-mrX"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="zKo-hV-mrX"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="itemAdd" destination="XTf-SF-Q2e" id="vTg-ch-eVk"/>
+                <outlet property="itemNumber" destination="stP-kc-sR3" id="RCu-g5-uaY"/>
+                <outlet property="itemNumberText" destination="xnw-b8-lGv" id="OAD-Yv-BVc"/>
+                <outlet property="itemRemove" destination="5KI-fb-jkb" id="JMc-r2-PsP"/>
+                <outlet property="itemSelect" destination="h1M-X5-Yxe" id="ygb-br-Hdu"/>
+                <outlet property="itemTitle" destination="O6S-N2-NeM" id="pde-SA-jdb"/>
+            </connections>
+            <point key="canvasLocation" x="418" y="194"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="itemBtn" width="40" height="40"/>
+        <image name="itemBtn_selected" width="40" height="40"/>
+        <image name="minus" width="43" height="41"/>
+        <image name="plus" width="43" height="41"/>
+    </resources>
+</document>
