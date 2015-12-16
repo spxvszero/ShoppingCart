@@ -96,6 +96,7 @@
 //确认编辑，覆盖备份
 - (void)confirmEditting
 {
+    [self deleteItem];
     self.backupCart = [[HZYShoppingCart sharedShoppingCart].cart copy];
     [self exitEdittingMode];
 }
